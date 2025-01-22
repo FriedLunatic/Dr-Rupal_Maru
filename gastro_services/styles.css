@@ -1,0 +1,343 @@
+/* Base Styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(to right, rgb(243, 226, 217), rgb(240, 217, 203), rgb(238, 208, 189));
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom-right-radius: 105px;
+    padding: 10px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar .logo {
+    font-family: "Dancing Script", serif;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+
+.navbar .menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .menu ul li {
+    margin: 0 15px;
+}
+
+.navbar .menu ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    padding: 10px 18px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.navbar .menu ul li a:hover {
+    color: #460538;
+    background: #fff;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #000;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to right, #00093c, #2d0b00);
+    color: #fff;
+    padding: 100px 20px 30px;
+    border-top-left-radius: 125px;
+    text-align: center;
+}
+
+footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: auto;
+}
+
+footer .col {
+    flex: 1 1 20%;
+    margin-bottom: 20px;
+}
+
+footer .social-icons .fa-brands {
+    margin: 0 10px;
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    color: #000;
+    border-radius: 50%;
+    line-height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+footer hr {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+/* Footer Links Styling */
+footer ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+footer ul li {
+    margin-bottom: 12px;
+}
+
+footer ul li a {
+    text-decoration: none; /* Remove underline */
+    color: #fff; /* Match footer text color */
+    font-size: 13px; /* Match footer font size */
+    font-weight: 400; /* Adjust weight for consistency */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+footer ul li a:hover {
+    color: #e4a4a4; /* Add a subtle hover effect */
+}
+
+footer .logo {
+    font-family: "Dancing Script", serif;
+}
+
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 120px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+}
+
+h1, h2 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 2rem;
+    text-decoration: underline;
+    text-align: center;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+
+/* Floating Button */
+.floating-button {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    background-color: #460538;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.floating-button:hover {
+    transform: scale(1.2);
+}
+
+/* Popup Container */
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Popup */
+.popup {
+    background-color: #e9e6e6;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    width: 90%;
+    max-width: 700px;
+    color: #f9f9f9;
+}
+
+.popup h2 {
+    margin-top: 0;
+    color: #500732;
+    font-size: 2.5rem;
+}
+
+/* Popup Buttons */
+.popup-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.popup-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: #500732;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.popup-button .icon {
+    margin-right: 8px;
+}
+
+.popup-button:hover {
+    color: #500732;
+    background-color: #e9e6e6;
+    transform: scale(1.15);
+}
+
+/* Close Button */
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #500732;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.close-popup:hover {
+    transform: scale(1.2);
+}
+
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    flex-wrap: wrap;
+    max-width: 62.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.map-container {
+    flex: 1;
+    height: 400px;
+    margin-right: 20px;
+}
+
+.contact-details {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.section-title {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+.contact-info {
+    margin: 20px 0;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.info-item i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #ff6b6b;
+}
+
+.info-item span {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.info-item a {
+    color: #ff6b6b;
+    text-decoration: none;
+}
+
+.opening-hours {
+    margin-top: 20px;
+}

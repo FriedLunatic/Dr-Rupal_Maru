@@ -1,0 +1,117 @@
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .menu {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu.active {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50vh;
+        background: linear-gradient(to right, rgb(243, 226, 217), rgb(240, 217, 203), rgb(238, 208, 189));
+        z-index: 1001;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu ul li {
+        margin: 0;
+    }
+
+    .menu ul li a {
+        color: #fff;
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    .menu ul li a:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    main {
+        max-width: 80vh;
+    }
+}
+
+/* Responsive Footer Design */
+@media (max-width: 1024px) {
+    footer .row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    footer .col {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+        /* Add spacing between sections */
+    }
+
+    footer .col h3 {
+        margin-bottom: 20px;
+    }
+
+    footer .social-icons {
+        justify-content: center;
+    }
+
+    footer .social-icons .fa-brands {
+        margin: 0 10px;
+        /* Reduce spacing for smaller screens */
+    }
+
+    hr {
+        width: 80%;
+        /* Reduce the width of the horizontal rule for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .map-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+        height: 300px;
+    }
+
+    .contact-details {
+        padding: 15px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .info-item i {
+        font-size: 20px;
+    }
+
+    .info-item span {
+        font-size: 14px;
+    }
+
+    .info-item a {
+        font-size: 14px;
+    }
+
+    .opening-hours p {
+        font-size: 14px;
+    }
+}

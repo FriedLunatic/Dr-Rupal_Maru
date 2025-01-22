@@ -1,0 +1,248 @@
+/* contact section */
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .map-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+        height: 300px;
+    }
+
+    .contact-details {
+        padding: 15px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .info-item i {
+        font-size: 20px;
+    }
+
+    .info-item span {
+        font-size: 14px;
+    }
+
+    .info-item a {
+        font-size: 14px;
+    }
+
+    .opening-hours p {
+        font-size: 14px;
+    }
+}
+
+/* menu and hero */
+@media (max-width: 1024px) {
+    .menu {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu.active {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50vh;
+        background: linear-gradient(to right, rgb(243, 226, 217), rgb(240, 217, 203), rgb(238, 208, 189));
+        z-index: 1001;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu ul li {
+        margin: 0;
+    }
+
+    .menu ul li a {
+        color: #fff;
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    .menu ul li a:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    main {
+        max-width: 80vh;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero {
+        height: 80vh; /* Adjust height for tablets */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem; /* Scale down heading */
+    }
+
+    .hero-content .subtitle {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 75vh; /* Adjust height for small devices */
+    }
+
+    .hero-content h1 {
+        font-size: 2rem; /* Scale down heading further */
+    }
+
+    .hero-content .subtitle {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 75vh; /* Adjust height for extra small devices */
+    }
+
+    .hero-content h1 {
+        font-size: 1.5rem; /* Further adjust heading */
+    }
+
+    .hero-content .subtitle {
+        font-size: 0.8rem;
+    }
+}
+
+/* footer */
+@media (max-width: 700px) {
+    footer {
+        bottom: unset;
+    }
+
+    .col {
+        flex-basis: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .col:nth-child(2),
+    .col:nth-child(3) {
+        flex-basis: 100%;
+    }
+}
+
+/* resources */
+/* Responsive: stack articles vertically */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.statement {
+    display: flex;
+    max-width: 500px;
+}
+
+
+/* logo and appt */
+@media (max-width: 1024px) {
+    .logo-line {
+        font-size: 30px; /* Reduce font size */
+    }
+
+    .tagline {
+        font-size: 16px; /* Adjust tagline size */
+    }
+
+    .appointment-text {
+        font-size: 20px; /* Adjust heading size */
+    }
+
+    .contact-number {
+        font-size: 16px; /* Adjust text size */
+    }
+
+    .buttons button {
+        padding: 8px 16px; /* Adjust button size */
+    }
+
+    .box{
+        max-width: 62.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .box {
+        padding: 15px;
+        max-width: 62.5rem; /* Adjust padding */
+    }
+
+    .logo-line {
+        font-size: 26px; /* Further reduce font size */
+    }
+
+    .divider {
+        width: 70%; /* Adjust divider width */
+    }
+
+    .appointment-text {
+        font-size: 18px;
+    }
+
+    .contact-number {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-line {
+        font-size: 22px;
+    }
+
+    .tagline {
+        font-size: 14px;
+    }
+
+    .divider {
+        width: 80%;
+    }
+
+    .appointment-text {
+        font-size: 16px;
+    }
+
+    .contact-number {
+        font-size: 12px;
+    }
+
+    .call-button,
+    .appointment-button {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons button {
+        margin: 5px 0; /* Stack buttons vertically */
+    }
+}

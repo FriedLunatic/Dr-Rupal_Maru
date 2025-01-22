@@ -1,0 +1,776 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lavishly+Yours&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+body {
+    font-family: 'poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    flex-wrap: wrap;
+    max-width: 62.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.map-container {
+    flex: 1;
+    height: 400px;
+    margin-right: 20px;
+}
+
+.contact-details {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.section-title {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+.contact-info {
+    margin: 20px 0;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.info-item i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #ff6b6b;
+}
+
+.info-item span {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.info-item a {
+    color: #ff6b6b;
+    text-decoration: none;
+}
+
+.opening-hours {
+    margin-top: 20px;
+}
+
+
+
+/* services section */
+.services-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    max-width: 62.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.service-box {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.service-box:nth-child(1) {
+    background-image: url('Assets/capsule.jpg');
+}
+
+.service-box:nth-child(2) {
+    background-image: url('Assets/colonoscopy.jpg');
+}
+
+.service-box:nth-child(3) {
+    background-image: url('Assets/functional\ disorder.jpg');
+}
+
+.service-box:nth-child(4) {
+    background-image: url('Assets/hepatology.jpg');
+}
+
+.service-box:nth-child(5) {
+    background-image: url('Assets/ibd\ mngt.jpg');
+}
+
+.service-box:nth-child(6) {
+    background-image: url('Assets/understanding\ gi.jpg');
+}
+
+.service-box:hover {
+    transform: scale(1.05);
+    filter: brightness(0.8);
+}
+
+.service-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.service-content i {
+    font-size: 50px;
+    margin-bottom: 10px;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.service-content h3 {
+    font-size: 22px;
+    margin: 0;
+    transition: transform 0.3s;
+}
+
+.service-content .read-more {
+    margin-top: 10px;
+    display: none;
+    color: #fff;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+.service-box:hover .service-content i,
+.service-box:hover .service-content h3 {
+    transform: scale(1.2);
+}
+
+.service-box:hover .service-content .read-more {
+    display: block;
+}
+
+
+/* about section*/
+.about-section {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    max-width: 62.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.about-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-details {
+    flex: 2;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.about-details h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.qualifications,
+.academic-career {
+    margin-bottom: 20px;
+}
+
+.qualifications h2,
+.academic-career h2 {
+    font-size: 22px;
+    background-color: #ffcccc;
+    padding: 10px;
+    border-radius: 5px;
+    color: #333;
+}
+
+.qualifications ul,
+.academic-career ul {
+    list-style: disc;
+    margin: 10px 0 0 20px;
+    padding: 0;
+}
+
+.qualifications li,
+.academic-career li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(to right, rgb(243, 226, 217), rgb(240, 217, 203), rgb(238, 208, 189));
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom-right-radius: 105px;
+    padding: 10px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar .logo {
+    font-family: "Dancing Script", serif;
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+
+.navbar .menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .menu ul li {
+    margin: 0 15px;
+}
+
+.navbar .menu ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    padding: 10px 18px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.navbar .menu ul li a:hover {
+    color: #460538;
+    background: #fff;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #000;
+}
+
+.menu-close {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #000;
+}
+
+.menu-close.show {
+    display: block;
+}
+
+/* Hero section styles */
+.hero {
+    height:85vh;
+    background: url('Assets/background\ main.jpg') center/cover no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    margin-top: 10px;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 15px;
+    /* Add padding for better spacing on smaller screens */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hero-content .subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: auto;
+    padding: auto;
+    text-decoration: underline;
+    max-width: 62.5rem;
+}
+
+footer {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    background: linear-gradient(to right, #00093c, #2d0b00);
+    color: #fff;
+    padding: 100px 0 30px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.row {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.col {
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+.col:nth-child(2),
+.col:nth-child(3) {
+    flex-basis: 15%;
+}
+
+.logo {
+    font-family: "Dancing Script", serif;
+    font-size: 2rem;
+    width: 300px;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.col h3 {
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.email-id {
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+ul li {
+    list-style: none;
+    margin-bottom: 12px;
+    padding: 0 0 0 10px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.social-icons .fa-brands {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+hr {
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.underline {
+    width: 100%;
+    height: 5px;
+    background: #767676;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+}
+
+
+
+/* Floating Button */
+.floating-button {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 60px;
+    height: 60px;
+    background-color: #460538;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.floating-button:hover {
+    transform: scale(1.2);
+}
+
+/* Popup Container */
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Popup */
+.popup {
+    background-color: #e9e6e6;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    width: 90%;
+    max-width: 700px;
+    color: #f9f9f9;
+}
+
+.popup h2 {
+    margin-top: 0;
+    color: #500732;
+    font-size: 2.5rem;
+}
+
+/* Popup Buttons */
+.popup-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.popup-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: #500732;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.popup-button .icon {
+    margin-right: 8px;
+}
+
+.popup-button:hover {
+    color: #500732;
+    background-color: #e9e6e6;
+    transform: scale(1.15);
+}
+
+/* Close Button */
+.close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #500732;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.close-popup:hover {
+    transform: scale(1.2);
+}
+
+
+/* Box Styling */
+.box {
+    max-width: 62.5rem;
+    /* Set a max width for responsiveness */
+    margin: 20px auto;
+    /* Center the box */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo Section */
+.logo-section {
+    text-align: center;
+}
+
+.logo-line {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.logo-line .thin {
+    font-weight: 300;
+}
+
+.divider {
+    margin: 10px auto;
+    width: 60%;
+    height: 1px;
+    background-color: #000000;
+}
+
+.tagline {
+    font-size: 18px;
+    color: #000000;
+    margin-top: 10px;
+}
+
+/* Appointment Section */
+.appointment-section {
+    text-align: center;
+}
+
+.appointment-text {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.contact-number {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.call-button,
+.appointment-button {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    /* Space between icon and text */
+    transition: transform 0.3s ease;
+}
+
+.call-button {
+    background-color: #d64040;
+}
+
+.appointment-button {
+    background-color: #d64040;
+}
+
+.call-button i,
+.appointment-button i {
+    font-size: 20px;
+}
+
+/* Hover Effect for Buttons */
+.call-button:hover,
+.appointment-button:hover {
+    transform: scale(1.1);
+}
+
+.resourcecontainer {
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+    padding-block: 5rem;
+    max-width: 62.5rem;
+    /* Set the container's width */
+    width: 100%;
+    /* Ensures responsiveness for smaller screens */
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3.5rem;
+    justify-content: center;
+}
+
+.card-article {
+    position: relative;
+    flex: 1 1 200px;
+    /* Articles are responsive with a minimum width */
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.card-img {
+    width: 400px;
+    border-radius: 1.5rem;
+}
+
+.card-data {
+    width: 230px;
+    background-color: rgb(173, 167, 167);
+    padding: 1.5rem 2rem;
+    box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+    border-radius: 1rem;
+    position: absolute;
+    bottom: -2rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    transform: scale(1);
+    /* Set initial scale */
+    transition: transform 0.3s ease;
+}
+
+.card-article:hover .card-data {
+    transform: scale(1.1);
+    /* Scale the container slightly */
+}
+
+.card-description {
+    display: block;
+    font-size: small;
+    margin-bottom: .25rem;
+}
+
+.card-title {
+    font-size: larger;
+    font-weight: 500;
+    color: black;
+    margin-bottom: .75rem;
+}
+
+.card-button {
+    text-decoration: none;
+    color: black;
+}
+
+.card-button:hover {
+    text-decoration: underline;
+}
