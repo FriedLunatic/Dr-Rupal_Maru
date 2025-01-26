@@ -3,7 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lavishly+Yours&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 html {
-    scroll-behavior: smooth; /* Enables smooth scrolling */
+    scroll-behavior: smooth;
+    /* Enables smooth scrolling */
 }
 
 body {
@@ -108,27 +109,27 @@ button {
 }
 
 .service-box:nth-child(1) {
-    background-image: url('Assets/capsule.jpg');
+    background-image: url('Assets/image\ capsule\ endo.png');
 }
 
 .service-box:nth-child(2) {
-    background-image: url('Assets/colonoscopy.jpg');
+    background-image: url('Assets/image\ colonoscopy.jpg');
 }
 
 .service-box:nth-child(3) {
-    background-image: url('Assets/functional\ disorder.jpg');
+    background-image: url('Assets/functional_gastrointestinal_disorders_symptoms_and_causes_6e0d2e91b9.jpg');
 }
 
 .service-box:nth-child(4) {
-    background-image: url('Assets/hepatology.jpg');
+    background-image: url('Assets/image\ hepatology.webp');
 }
 
 .service-box:nth-child(5) {
-    background-image: url('Assets/ibd\ mngt.jpg');
+    background-image: url('Assets/appt.jpg');
 }
 
 .service-box:nth-child(6) {
-    background-image: url('Assets/understanding\ gi.jpg');
+    background-image: url('Assets/image\ endoscopy.avif');
 }
 
 .service-box:hover {
@@ -142,7 +143,7 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: #fff;
+    color: #0e0d0d;
     transition: all 0.3s;
 }
 
@@ -162,7 +163,7 @@ button {
 .service-content .read-more {
     margin-top: 10px;
     display: none;
-    color: #fff;
+    color: #0e0d0d;
     text-decoration: underline;
     font-size: 16px;
 }
@@ -328,7 +329,7 @@ button {
 
 /* Hero section styles */
 .hero {
-    height:85vh;
+    height: 85vh;
     background: url('Assets/background\ main.jpg') center/cover no-repeat;
     background-position: center;
     background-repeat: no-repeat;
@@ -773,4 +774,69 @@ hr {
 
 .card-button:hover {
     text-decoration: underline;
+}
+
+/* Carousel Container */
+.carousel {
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    /* Center the carousel horizontally */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Carousel Inner */
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Carousel Item */
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    height: 500px;
+    /* Fixed height for uniform size */
+    overflow: hidden;
+    /* Ensure images don't overflow */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    /* Fill the container */
+    object-fit: cover;
+    /* Maintain aspect ratio while covering the container */
+    display: block;
+    border-radius: 10px;
+}
+
+/* Carousel Controls */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
 }

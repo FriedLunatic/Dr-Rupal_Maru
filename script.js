@@ -56,3 +56,53 @@ popupContainer.addEventListener('click', (e) => {
         document.body.style.overflow = '';
     }
 });
+
+const carouselInner = document.querySelector('.carousel-inner');
+const prevButton = document.querySelector('.carousel-control.prev');
+const nextButton = document.querySelector('.carousel-control.next');
+let currentIndex = 0;
+let autoScrollInterval;
+
+// Function to move to the next slide
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % carouselInner.children.length;
+  updateCarousel();
+}
+
+// Function to move to the previous slide
+function prevSlide() {
+  currentIndex = (currentIndex - 1 + carouselInner.children.length) % carouselInner.children.length;
+  updateCarousel();
+}
+
+// Function to update the carousel position
+function updateCarousel() {
+  const offset = -currentIndex * 100;
+  carouselInner.style.transform = `translateX(${offset}%)`;
+}
+
+// Auto-scroll every 10 seconds
+function startAutoScroll() {
+  autoScrollInterval = setInterval(nextSlide, 10000);
+}
+
+// Stop auto-scroll on user interaction
+function stopAutoScroll() {
+  clearInterval(autoScrollInterval);
+}
+
+// Event listeners for buttons
+prevButton.addEventListener('click', () => {
+  stopAutoScroll();
+  prevSlide();
+  startAutoScroll();
+});
+
+nextButton.addEventListener('click', () => {
+  stopAutoScroll();
+  nextSlide();
+  startAutoScroll();
+});
+
+// Start auto-scroll on page load
+startAutoScroll();
